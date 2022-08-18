@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Script that displays 'Best School' 10 times
+
+k=0
+until [ $k -gt 9 ]
+do
+	echo "Best School"
+	(( k++ ))
+done
