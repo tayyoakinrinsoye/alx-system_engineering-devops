@@ -2,7 +2,6 @@
 #Script to display infinity and beyond indefinitely
 
 var=10
-
 while [ $var -lt 20 ]
 do
 	echo "TO infinity and beyond"
