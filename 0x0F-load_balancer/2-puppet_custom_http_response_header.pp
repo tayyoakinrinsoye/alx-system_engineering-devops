@@ -1,4 +1,5 @@
-# Installs a Nginx server with custome HTTP header
+# Using puppet to Installs a Nginx server 
+#with custome HTTP header
 
 exec {'update':
   provider => shell,
