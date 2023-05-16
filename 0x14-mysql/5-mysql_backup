@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Generates a compressed archive of a MySQL dump.
-#!/usr/bin/env bash
 
 # Check if password argument is provided
 if [ -z "$1" ]; then
@@ -10,15 +9,10 @@ fi
 
 # Generate the MySQL dump
 mysqldump -uroot -p"$1" --all-databases > backup.sql
-
-# Get the current date in the required format
 date=$(date +"%d-%m-%Y")
 
 # Compress the MySQL dump into a tar.gz archive
 tar -czvf "$date.tar.gz" backup.sql
-
-# Remove the MySQL dump file
-rm backup.sql
 
 echo "MySQL dump and archive created successfully."
 echo "Archive file name: $date.tar.gz"
